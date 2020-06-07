@@ -1,0 +1,17 @@
+{
+  "name": "otto",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "tsc && npm run copy-assets && npm run copy-public",
+    "watch": "tsc -w",
+    "lint": "tslint -c tslint.json -p tsconfig.json",
+    "start": "npm run build && electron ./build/main.js",
+    "copy-assets": "cp -rv src/assets build/assets",
+    "copy-public": "cp -rv src/public build/public"
+  },
+  "devDependencies": {
+    "electron": "^9.0.2",
+    "tslint": "^6.1.2",
+    "typescript": "^3.9.5"
+  }
+}
